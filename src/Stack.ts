@@ -31,7 +31,6 @@ export function isValid(s: string): boolean {
   const arrayStack = new Stack();
   for (let i = 0; i < chatArr.length; i++) {
     const char: string = s.charAt(i);
-    debugger
     if (char === "{" || char === "[" || char === "(") {
       arrayStack.push(char);
     } else {
