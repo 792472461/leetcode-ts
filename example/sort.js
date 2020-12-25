@@ -1,8 +1,9 @@
-const { selectSort, insertionSort, bubbleSort, shellSort } = require('../dist/leetcode.umd')
+const { Sort } = require('../dist/leetcode.umd')
+const { selectSort, insertionSort, bubbleSort, shellSort } = Sort
 /**
  *
  * @param {Function} sort 排序方法
- * @param {*} maxIndex 最大多少项
+ * @param {number} maxIndex 最大多少项
  * @returns {number} 排序耗时(ms)
  */
 function createSort(sort, maxIndex = 10) {
@@ -22,7 +23,7 @@ function createSort(sort, maxIndex = 10) {
   return new Date().getTime() - startTime
 }
 
-const max = 100000
+const max = 10000
 
 // 选择排序
 createSort(selectSort, max)
